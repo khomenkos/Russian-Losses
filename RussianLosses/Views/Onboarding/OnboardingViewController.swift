@@ -21,7 +21,7 @@ class OnboardingViewController: UIViewController {
             if currentPage == slides.count - 1 {
                 nextButton.setTitle("Слава Україні!", for: .normal)
             } else {
-                nextButton.setTitle("Далі ", for: .normal)
+                nextButton.setTitle("Далі", for: .normal)
             }
         }
     }
