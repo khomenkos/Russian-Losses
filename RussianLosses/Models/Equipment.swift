@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Equipment {
     
@@ -22,4 +23,10 @@ struct Equipment {
     let drone: Int
     let navalShip: Int
     let antiAircraftWarfare: Int
+}
+
+struct ModelCell {
+    let title: String
+    let count: String
+    let image: UIImage
 }

@@ -15,8 +15,7 @@ struct Personnel {
     let pow: Int
 }
 
-struct ModelCell {
-    let title: String
-    let count: String
-    let image: UIImage
+struct ModelCellLosses {
+    let day: String
+    let personnel: String
 }

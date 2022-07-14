@@ -16,18 +16,10 @@ class DetailViewController: UIViewController {
     var equipment: [Equipment] = []
     var personnel: [Personnel] = []
     var modelCell: [ModelCell] = [
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank")),
-        .init(title: "Tank", count: "10020", image: #imageLiteral(resourceName: "image_2.svg"))
+//        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank"))
     ]
     
+    var model = ModelCellLosses.init(day: "1", personnel: "11")
     
     
     override func viewDidLoad() {
@@ -38,7 +30,14 @@ class DetailViewController: UIViewController {
         
         registerCells()
         
+
+        setup(personnel: model)
         
+    }
+    
+    func setup(personnel: ModelCellLosses) {
+        dayLabel.text = personnel.day
+        countLosses.text = personnel.personnel
     }
     
     @IBAction func supportBtn(_ sender: Any) {
@@ -57,13 +56,12 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 10
         
-//        switch collectionView {
-//        case equipmentCollectionView:
-//            return equipment.count
-//        default: return 0
-//        }
+        switch collectionView {
+        case equipmentCollectionView:
+            return modelCell.count
+        default: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -41,7 +41,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.16472866068889411" green="0.21982273910984851" blue="0.045217175127415077" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="10"/>
@@ -49,7 +49,7 @@
                                 </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="180" id="4R8-GZ-kvD"/>
                             <constraint firstAttribute="trailing" secondItem="AAe-Qh-LW1" secondAttribute="trailing" constant="8" id="C2C-2w-cGz"/>
@@ -58,6 +58,11 @@
                             <constraint firstAttribute="height" constant="300" id="vB2-cv-4aQ"/>
                             <constraint firstItem="AAe-Qh-LW1" firstAttribute="leading" secondItem="5d4-av-p6t" secondAttribute="leading" constant="8" id="x3i-WA-dSY"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
             </view>
