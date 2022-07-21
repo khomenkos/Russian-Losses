@@ -8,10 +8,10 @@
 import Foundation
 
 struct Personnel: Codable {
-    let date: String
-    let day: Int
-    let personnel: Int
-    let pow: Int
+    let date: String?
+    let day: Int?
+    let personnel: Int?
+    let pow: Int?
     
     enum CodingKeys: String, CodingKey {
         case date
@@ -23,14 +23,14 @@ struct Personnel: Codable {
     
     //EDIT 
     var stringAmount: String {
-        return String(personnel)
+        return String(personnel ?? 0)
     }
     
     var stringDay: String {
-        return String(day)
+        return String(day ?? 0)
     }
     var stringDays: String {
-        return "\(day)-й день боротьби з окупантами"
+        return "\(day ?? 0)-й день боротьби з окупантами"
     }
 }
 

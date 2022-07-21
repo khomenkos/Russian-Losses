@@ -10,33 +10,30 @@ import UIKit
 
 struct Equipment: Decodable {
     
-    let date: String
-    let day: Int
-    let aircraft: Int
-    let helicopter: Int
-    let tank: Int
-    let apc: Int
-    let field_artillery: Int
-    let mrl: Int
-    let militaryAuto: Int?
-    let fuelTank: Int?
-    let drone: Int
-    let navalShip: Int
-    let antiAircraftWarfare: Int
+    let date: String?
+    let day: Int?
+    let aircraft: Int?
+    let helicopter: Int?
+    let tank: Int?
+    let apc: Int?
+    let field_artillery: Int?
+    let mrl: Int?
+    let drone: Int?
+    let navalShip: Int?
+    let antiAircraftWarfare: Int?
     let specialEquipment: Int?
-    let mobileSRBMsystem: Int?
     let vehiclesAndFuelTanks: Int?
     let cruiseMissiles: Int?
+    let greatestLossesDirection: String?
     
     var stringAircraft: String {
-        return String(aircraft)
+        return String(aircraft ?? 0)
     }
     
     var stringDay: String {
-        return String(day)
+        return String(day ?? 0)
     }
 
-    
     enum CodingKeys: String, CodingKey {
         case date
         case day
@@ -46,15 +43,13 @@ struct Equipment: Decodable {
         case apc = "APC"
         case field_artillery = "field artillery"
         case mrl = "MRL"
-        case militaryAuto = "military auto"
-        case fuelTank = "fuel tank"
         case drone
         case navalShip = "naval ship"
         case antiAircraftWarfare = "anti-aircraft warfare"
         case specialEquipment = "special equipment"
-        case mobileSRBMsystem = "mobile SRBM system"
         case vehiclesAndFuelTanks = "vehicles and fuel tanks"
         case cruiseMissiles = "cruise missiles"
+        case greatestLossesDirection = "greatest losses direction"
     }
 }
 

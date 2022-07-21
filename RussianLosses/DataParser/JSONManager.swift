@@ -31,6 +31,11 @@ class JsonManager {
             if let bundlePath = Bundle.main.path(forResource: name,
                                                  ofType: "json"),
                let jsonData = try String(contentsOfFile: bundlePath).data(using: .utf8) {
+                
+//                var jsonString = String(data: jsonData, encoding: .utf8)
+//                jsonString = jsonString?.replacingOccurrences(of: "NaN", with: "0")
+//                
+//                let correctData = Data(jsonString!.utf8)
                 return jsonData
             }
         } catch {
@@ -55,7 +60,6 @@ class JsonManager {
         do {
             let decodedData = try JSONDecoder().decode([Personnel].self,
                                                        from: jsonData)
-
             return decodedData
         } catch {
             print("JSON Parse error: \(error.localizedDescription)")
