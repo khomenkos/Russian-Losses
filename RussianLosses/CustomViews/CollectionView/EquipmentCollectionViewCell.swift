@@ -19,10 +19,10 @@ class EquipmentCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    func setup(equipment: ModelCell) {
-        titleLbl.text = equipment.title
-        imageView.image = equipment.image
-        countLbl.text = equipment.count
+    func setup(equipment: Equipment) {
+        titleLbl.text = "Tank"
+        //imageView.image = equipment.image
+        countLbl.text = equipment.stringAircraft
     }
 
 }

@@ -12,15 +12,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dayLabel: UILabel!
     @IBOutlet weak var equipmentCollectionView: UICollectionView!
     @IBOutlet weak var countLosses: UILabel!
-    
-    var equipment: [Equipment] = []
-    var personnel: [Personnel] = []
-    var modelCell: [ModelCell] = [
-//        .init(title: "Танк", count: "10000", image: #imageLiteral(resourceName: "tank"))
-    ]
-    
-    var model = ModelCellLosses.init(day: "1", personnel: "11")
-    
+
+    var personnel: Personnel?
+    var equipment: Equipment?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,29 +24,25 @@ class DetailViewController: UIViewController {
         equipmentCollectionView.delegate = self
         
         registerCells()
-        
 
-        setup(personnel: model)
-        
+        setup()
     }
     
-    func setup(personnel: ModelCellLosses) {
-        dayLabel.text = personnel.day
-        countLosses.text = personnel.personnel
+    func setup() {
+        dayLabel.text = personnel?.stringDays
+        countLosses.text = personnel?.stringAmount
     }
     
     @IBAction func supportBtn(_ sender: Any) {
         if let url = URL(string: "https://bank.gov.ua/ua/about/support-the-armed-forces") {
               UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
-
     }
     
     private func registerCells() {
         equipmentCollectionView.register(UINib(nibName: EquipmentCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: EquipmentCollectionViewCell.identifier)
 
     }
-
 }
 extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -59,7 +50,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         switch collectionView {
         case equipmentCollectionView:
-            return modelCell.count
+            return 10
         default: return 0
         }
     }
@@ -69,7 +60,7 @@ extension DetailViewController: UICollectionViewDelegate, UICollectionViewDataSo
         switch collectionView {
         case equipmentCollectionView:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EquipmentCollectionViewCell.identifier, for: indexPath) as! EquipmentCollectionViewCell
-            cell.setup(equipment: modelCell[indexPath.row])
+            cell.setup(equipment: equipment!)
             return cell
         default: return UICollectionViewCell()
         }

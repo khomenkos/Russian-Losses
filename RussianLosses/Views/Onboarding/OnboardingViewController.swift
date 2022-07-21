@@ -41,7 +41,7 @@ class OnboardingViewController: UIViewController {
 
     @IBAction func nextAction(_ sender: Any) {
         if currentPage == slides.count - 1 {
-            let controller = storyboard?.instantiateViewController(identifier: "HomeVC")
+            let controller = storyboard?.instantiateViewController(identifier: "MainViewController")
             controller?.modalPresentationStyle = .fullScreen
             //controller?.modalTransitionStyle = .flipHorizontal
             UserDefaults.standard.hasOnboarding = true

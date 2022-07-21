@@ -27,6 +27,10 @@
 		E3D8F4B5287DA96900D90776 /* EquipmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8F4B3287DA96900D90776 /* EquipmentCollectionViewCell.swift */; };
 		E3D8F4B6287DA96900D90776 /* EquipmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3D8F4B4287DA96900D90776 /* EquipmentCollectionViewCell.xib */; };
 		E3D8F4B8287EBACB00D90776 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8F4B7287EBACB00D90776 /* UIViewController.swift */; };
+		E3D8F4BB28815C1800D90776 /* JSONManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D8F4BA28815C1800D90776 /* JSONManager.swift */; };
+		E3E6EF472888442F00A52770 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E6EF462888442F00A52770 /* MainViewController.swift */; };
+		E3E6EF55288845CE00A52770 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E6EF53288845CE00A52770 /* DateTableViewCell.swift */; };
+		E3E6EF56288845CE00A52770 /* DateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3E6EF54288845CE00A52770 /* DateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,10 @@
 		E3D8F4B3287DA96900D90776 /* EquipmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		E3D8F4B4287DA96900D90776 /* EquipmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EquipmentCollectionViewCell.xib; sourceTree = "<group>"; };
 		E3D8F4B7287EBACB00D90776 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		E3D8F4BA28815C1800D90776 /* JSONManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONManager.swift; sourceTree = "<group>"; };
+		E3E6EF462888442F00A52770 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E3E6EF53288845CE00A52770 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		E3E6EF54288845CE00A52770 /* DateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +92,7 @@
 		E3998742287C538D00DF2601 /* RussianLosses */ = {
 			isa = PBXGroup;
 			children = (
+				E3D8F4B928815BD600D90776 /* DataParser */,
 				E3D8F4A6287D955C00D90776 /* Data */,
 				E3D8F49C287C60D800D90776 /* Extensions */,
 				E3D8F4A1287C662000D90776 /* CustomViews */,
@@ -102,6 +111,7 @@
 		E3D8F492287C5F4500D90776 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E3E6EF452888440400A52770 /* TableView */,
 				E3D8F4AF287D98B900D90776 /* Detail */,
 				E3D8F49E287C610E00D90776 /* Home */,
 				E3D8F49D287C610200D90776 /* Onboarding */,
@@ -149,6 +159,7 @@
 		E3D8F4A1287C662000D90776 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E3E6EF482888444600A52770 /* DateTableCell */,
 				E3D8F4B2287DA92600D90776 /* CollectionView */,
 				E3D8F4A2287C663C00D90776 /* CardView.swift */,
 			);
@@ -179,6 +190,31 @@
 				E3D8F4B4287DA96900D90776 /* EquipmentCollectionViewCell.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		E3D8F4B928815BD600D90776 /* DataParser */ = {
+			isa = PBXGroup;
+			children = (
+				E3D8F4BA28815C1800D90776 /* JSONManager.swift */,
+			);
+			path = DataParser;
+			sourceTree = "<group>";
+		};
+		E3E6EF452888440400A52770 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				E3E6EF462888442F00A52770 /* MainViewController.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		E3E6EF482888444600A52770 /* DateTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3E6EF53288845CE00A52770 /* DateTableViewCell.swift */,
+				E3E6EF54288845CE00A52770 /* DateTableViewCell.xib */,
+			);
+			path = DateTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3D8F4A9287D958000D90776 /* russia_losses_personnel.json in Resources */,
+				E3E6EF56288845CE00A52770 /* DateTableViewCell.xib in Resources */,
 				E3D8F4AA287D958000D90776 /* russia_losses_equipment.json in Resources */,
 				E3998750287C538F00DF2601 /* LaunchScreen.storyboard in Resources */,
 				E399874D287C538F00DF2601 /* Assets.xcassets in Resources */,
@@ -257,17 +294,20 @@
 			files = (
 				E3D8F4B8287EBACB00D90776 /* UIViewController.swift in Sources */,
 				E3D8F499287C609100D90776 /* OnboardingSlide.swift in Sources */,
+				E3E6EF55288845CE00A52770 /* DateTableViewCell.swift in Sources */,
 				E3998748287C538D00DF2601 /* HomeViewController.swift in Sources */,
 				E3D8F4AE287D95D700D90776 /* Equipment.swift in Sources */,
 				E3D8F4B1287D98CB00D90776 /* DetailViewController.swift in Sources */,
 				E3D8F4AC287D95C000D90776 /* Personnel.swift in Sources */,
 				E3D8F49B287C60D400D90776 /* UserDefaults.swift in Sources */,
+				E3E6EF472888442F00A52770 /* MainViewController.swift in Sources */,
 				E3998744287C538D00DF2601 /* AppDelegate.swift in Sources */,
 				E3998746287C538D00DF2601 /* SceneDelegate.swift in Sources */,
 				E3D8F4A0287C611D00D90776 /* OnboardingCollectionViewCell.swift in Sources */,
 				E3D8F4A3287C663C00D90776 /* CardView.swift in Sources */,
 				E3D8F4A5287C665D00D90776 /* UIView.swift in Sources */,
 				E3D8F4B5287DA96900D90776 /* EquipmentCollectionViewCell.swift in Sources */,
+				E3D8F4BB28815C1800D90776 /* JSONManager.swift in Sources */,
 				E3D8F497287C5FBC00D90776 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

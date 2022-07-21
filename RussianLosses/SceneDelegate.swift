@@ -23,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
         if UserDefaults.standard.hasOnboarding {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            controller = storyboard.instantiateViewController(identifier: "HomeVC") 
+            controller = storyboard.instantiateViewController(identifier: "MainViewController") 
         } else {
             controller = OnboardingViewController.instantiate()
         }
