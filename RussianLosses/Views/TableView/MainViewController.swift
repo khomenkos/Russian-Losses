@@ -13,8 +13,8 @@ class MainViewController: UIViewController {
     
     var personnel: [Personnel] = []
     var equipment: [Equipment] = []
-    
-    
+    var modelCell: [ModelCellEquipment] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,5 +57,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         controller.personnel = personnel[indexPath.row]
         controller.equipment = equipment[indexPath.row]
         navigationController?.present(controller, animated: true, completion: nil)
+        //navigationController?.pushViewController(controller, animated: true)
     }
 }

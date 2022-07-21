@@ -15,14 +15,9 @@ class EquipmentCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var countLbl: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func setup(equipment: ModelCellEquipment) {
+        titleLbl.text = equipment.title
+        imageView.image = UIImage(named: equipment.image)
+        countLbl.text = String(equipment.amount ?? 0)
     }
-    func setup(equipment: Equipment) {
-        titleLbl.text = "Tank"
-        //imageView.image = equipment.image
-        countLbl.text = equipment.stringAircraft
-    }
-
 }

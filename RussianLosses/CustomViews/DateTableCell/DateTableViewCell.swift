@@ -15,7 +15,7 @@ class DateTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
 
     func setup(personnel: Personnel) {
-        dayLabel.text = personnel.stringDay
+        dayLabel.text = personnel.dayToString
         dateLabel.text = personnel.date
     }
 }

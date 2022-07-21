@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Personnel: Codable {
+struct Personnel: Decodable {
     let date: String?
     let day: Int?
     let personnel: Int?
@@ -20,21 +20,13 @@ struct Personnel: Codable {
         case pow = "POW"
     }
     
-    
-    //EDIT 
-    var stringAmount: String {
+    var personnelToString: String {
         return String(personnel ?? 0)
     }
-    
-    var stringDay: String {
+    var dayToString: String {
         return String(day ?? 0)
     }
-    var stringDays: String {
+    var daysToString: String {
         return "\(day ?? 0)-й день боротьби з окупантами"
     }
-}
-
-struct ModelCellPersonnel {
-    let day: Int
-    let personnelCount: Int
 }

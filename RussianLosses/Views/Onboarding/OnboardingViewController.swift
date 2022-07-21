@@ -13,7 +13,6 @@ class OnboardingViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    
     var slides: [OnboardingSlide] = []
     var currentPage = 0 {
         didSet {
@@ -34,11 +33,9 @@ class OnboardingViewController: UIViewController {
             OnboardingSlide(title: "#StopRussianAggresion", description: "", image: #imageLiteral(resourceName: "1"))
 
         ]
-        
         pageControl.numberOfPages = slides.count
     }
     
-
     @IBAction func nextAction(_ sender: Any) {
         if currentPage == slides.count - 1 {
             let controller = storyboard?.instantiateViewController(identifier: "MainViewController")

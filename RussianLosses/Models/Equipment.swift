@@ -25,14 +25,6 @@ struct Equipment: Decodable {
     let vehiclesAndFuelTanks: Int?
     let cruiseMissiles: Int?
     let greatestLossesDirection: String?
-    
-    var stringAircraft: String {
-        return String(aircraft ?? 0)
-    }
-    
-    var stringDay: String {
-        return String(day ?? 0)
-    }
 
     enum CodingKeys: String, CodingKey {
         case date
@@ -55,7 +47,7 @@ struct Equipment: Decodable {
 
 struct ModelCellEquipment {
     let title: String
-    let count: String
-    let image: UIImage
+    let amount: Int?
+    let image: String
 }
 
