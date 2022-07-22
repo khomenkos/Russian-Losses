@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
         title = "Втрати противника"
         registerCells()
         
+        // Parse Personnel data
         JsonManager.shared.fetchPersonnel { [weak self] (data) in
             self?.personnel = data
             self?.tableView.reloadData()
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
             print(string)
         }
         
+        // Parse Equipment data
         JsonManager.shared.fetchEquipment { [weak self] (data) in
             self?.equipment = data
         } failure: { string in

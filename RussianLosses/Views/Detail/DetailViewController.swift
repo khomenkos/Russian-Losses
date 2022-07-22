@@ -28,8 +28,7 @@ class DetailViewController: UIViewController {
         setup()
     }
     
-    
-    //Edit
+    // Set up data from Equipment to ModelCellEquipment
     func configEquipmentCell(equipment: Equipment?) -> [ModelCellEquipment] {
         
         let (aircraft,
@@ -83,6 +82,11 @@ class DetailViewController: UIViewController {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
     }
+    
+    @IBAction func closeBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
     private func registerCells() {
         equipmentCollectionView.register(UINib(nibName: EquipmentCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: EquipmentCollectionViewCell.identifier)

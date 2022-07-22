@@ -39,6 +39,7 @@ class JsonManager {
         return nil
     }
 
+    // Decode Equipment
     private func getEquipment(jsonData: Data) -> [Equipment]? {
         do {
             let decodedData = try JSONDecoder().decode([Equipment].self,
@@ -49,7 +50,8 @@ class JsonManager {
             return nil
         }
     }
-
+    
+    // Decode Personnel
     private func getPersonnel(jsonData: Data) -> [Personnel]? {
         do {
             let decodedData = try JSONDecoder().decode([Personnel].self,
